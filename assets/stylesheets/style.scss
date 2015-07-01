@@ -48,6 +48,9 @@ body {
 		border-radius: 15px;
 		border: 2px solid $tealAccent;
 		color: $tealAccent;
+		&:hover {
+			background-color: lighten($darkGrey, 20%);
+		}
 	}
 }
 .activitiesHolder{

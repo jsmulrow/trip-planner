@@ -40,6 +40,8 @@ body {
     border-radius: 15px;
     border: 2px solid #00B2B2;
     color: #00B2B2; }
+    .dayHolder .nav.nav-pills li a:hover {
+      background-color: #666666; }
 
 .activitiesHolder {
   background-color: #333;
