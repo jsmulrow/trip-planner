@@ -75,7 +75,23 @@ body {
 	}
 }
 
+@media (max-width: 992px) {
+	#mapContainer {
+		margin-bottom: 15px;
+	}
+	#googleMap {
+		height: 50vh;
+	}
+}
 
+@media (max-width: 768px) {
+	#mapContainer {
+		margin-bottom: 15px;
+	}
+	#googleMap {
+		height: 50vh;
+	}
+}
 
 
 

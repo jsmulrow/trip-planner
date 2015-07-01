@@ -32,11 +32,7 @@ body {
   background-color: #435E5E;
   border-top-right-radius: 15px;
   border-top-left-radius: 15px;
-  border: 2px solid #00B2B2;
-  /*.nav.nav-pills {
-		margin-left: auto;
-		margin-right: auto;
-	}*/ }
+  border: 2px solid #00B2B2; }
   .dayHolder .nav.nav-pills li a {
     background-color: #333;
     margin-left: 1px;
@@ -64,3 +60,15 @@ body {
     border-radius: 10px; }
   .activitiesHolder a {
     font-size: 18px; }
+
+@media (max-width: 992px) {
+  #mapContainer {
+    margin-bottom: 15px; }
+  #googleMap {
+    height: 50vh; } }
+
+@media (max-width: 768px) {
+  #mapContainer {
+    margin-bottom: 15px; }
+  #googleMap {
+    height: 50vh; } }
