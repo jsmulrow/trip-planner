@@ -76,3 +76,7 @@ body {
     margin-bottom: 15px; }
   #googleMap {
     height: 50vh; } }
+
+.btn-gray {
+  display: inline-block;
+  background-color: silver; }
