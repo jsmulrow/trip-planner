@@ -7,7 +7,7 @@ var Hotel = dbs.Hotel;
 var Restaurant = dbs.Restaurant;
 var ThingToDo = dbs.ThingToDo;
 
-var APIkey = require('../mapsAPI.js')
+var APIkey = require('../mapsAPI.js');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {

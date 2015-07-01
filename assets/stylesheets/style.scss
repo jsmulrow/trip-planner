@@ -7,16 +7,19 @@ $blueGrey: #435E5E;
 body {
 	background-color: $backgroundGrey;
 }
-
 .navbar-inverse .navbar-nav > li > a, .navbar-inverse .navbar-brand {
     color: $tealAccent;
 }
 .navbar-inverse .navbar-nav .active > a{
 	color: $tealAccent;
 }
+#mapContainer {
+	padding: 0;
+}
 #googleMap {
+	margin-top: -20px;
 	width: 100%;
-	height: 90vh;
+	height: 95vh;
 }
 .selectionMenu {
 	background-color: $darkGrey;
@@ -66,9 +69,13 @@ body {
 	.activtiesLead {
 		margin-top: 0px;
 		padding-top: 15px;
-		a {
-			text-decoration: none;
-		}
+	}
+	button {
+		margin-bottom:  -3px;
+		border-radius: 10px;
+	}
+	a {
+		font-size: 18px;
 	}
 }
 
