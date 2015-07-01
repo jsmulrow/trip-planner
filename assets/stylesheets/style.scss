@@ -19,7 +19,7 @@ body {
 #googleMap {
 	margin-top: -20px;
 	width: 100%;
-	height: 95vh;
+	height: calc(100vh - 50px);
 }
 .selectionMenu {
 	background-color: $darkGrey;
@@ -33,6 +33,9 @@ body {
 	select {
 		background-color: $blueGrey;
 		color: black;
+	}
+	button:hover {
+		background-color: lighten($darkGrey, 35%);
 	}
 }
 .dayHolder {
@@ -48,6 +51,9 @@ body {
 		border-radius: 15px;
 		border: 2px solid $tealAccent;
 		color: $tealAccent;
+		&:hover {
+			background-color: lighten($darkGrey, 20%);
+		}
 	}
 }
 .activitiesHolder{
@@ -68,7 +74,7 @@ body {
 	}
 	button {
 		margin-bottom:  -3px;
-		border-radius: 10px;
+		border-radius: 5px;
 	}
 	a {
 		font-size: 18px;

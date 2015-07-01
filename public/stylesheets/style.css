@@ -13,7 +13,7 @@ body {
 #googleMap {
   margin-top: -20px;
   width: 100%;
-  height: 95vh; }
+  height: calc(100vh - 50px); }
 
 .selectionMenu {
   background-color: #333;
@@ -26,6 +26,8 @@ body {
   .selectionMenu select {
     background-color: #435E5E;
     color: black; }
+  .selectionMenu button:hover {
+    background-color: #8c8c8c; }
 
 .dayHolder {
   padding: 10px;
@@ -40,6 +42,8 @@ body {
     border-radius: 15px;
     border: 2px solid #00B2B2;
     color: #00B2B2; }
+    .dayHolder .nav.nav-pills li a:hover {
+      background-color: #666666; }
 
 .activitiesHolder {
   background-color: #333;
@@ -57,7 +61,7 @@ body {
     padding-top: 15px; }
   .activitiesHolder button {
     margin-bottom: -3px;
-    border-radius: 10px; }
+    border-radius: 5px; }
   .activitiesHolder a {
     font-size: 18px; }
 
