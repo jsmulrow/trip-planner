@@ -1,9 +1,24 @@
 var express = require('express');
 var router = express.Router();
 
+var dbs = require('../models');
+var Place = dbs.Place;
+var Hotel = dbs.Hotel;
+var Restaurant = dbs.Restaurant;
+var ThingToDo = dbs.ThingToDo;
+
+
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+	Promise.all([Hotel.find().exec(), Restaurant.find().exec(), ThingToDo.find().exec()])
+		.then(function(data) {
+			res.render('index', {
+				hotels: data[0],
+				restaurants: data[1],
+				thingsToDo: data[2]
+			});
+		});
 });
 
 module.exports = router;
