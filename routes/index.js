@@ -7,7 +7,7 @@ var Hotel = dbs.Hotel;
 var Restaurant = dbs.Restaurant;
 var ThingToDo = dbs.ThingToDo;
 
-
+var APIkey = require('../mapsAPI.js')
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -16,7 +16,8 @@ router.get('/', function(req, res, next) {
 			res.render('index', {
 				hotels: data[0],
 				restaurants: data[1],
-				thingsToDo: data[2]
+				thingsToDo: data[2],
+				APIkey: APIkey
 			});
 		});
 });
