@@ -34,6 +34,9 @@ body {
 		background-color: $blueGrey;
 		color: black;
 	}
+	button:hover {
+		background-color: lighten($darkGrey, 35%);
+	}
 }
 .dayHolder {
 	padding: 10px;

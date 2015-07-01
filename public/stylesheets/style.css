@@ -26,6 +26,8 @@ body {
   .selectionMenu select {
     background-color: #435E5E;
     color: black; }
+  .selectionMenu button:hover {
+    background-color: #8c8c8c; }
 
 .dayHolder {
   padding: 10px;
