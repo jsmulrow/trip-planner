@@ -4,6 +4,8 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var sass = require('node-sass-middleware');
+
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
@@ -20,7 +22,17 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
+// sass
+app.use(
+  sass({
+    src: __dirname + '/assets',
+    dest: __dirname + '/public',
+    debug: true
+  })
+);
+
 app.use(express.static(path.join(__dirname, 'public')));
+
 
 app.use('/', routes);
 app.use('/users', users);
@@ -50,9 +62,10 @@ if (app.get('env') === 'development') {
 // no stacktraces leaked to user
 app.use(function(err, req, res, next) {
   res.status(err.status || 500);
+  console.log({error: err});
   res.render('error', {
     message: err.message,
-    error: {}
+    error: err
   });
 });
 
