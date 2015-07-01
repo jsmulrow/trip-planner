@@ -41,8 +41,8 @@
     // set the map options hash
     var mapOptions = {
         center: myLatlng,
-        zoom: 16,
-        mapTypeId: google.maps.MapTypeId.ROADMAP
+        zoom: 14,
+        mapTypeId: google.maps.MapTypeId.ROADMAP,
     };
     // get the maps div's HTML obj
     var map_canvas_obj = document.getElementById("googleMap");
@@ -53,12 +53,80 @@
         position: myLatlng,
         title:"Hello World!"
     });
+        var styles = [
+	       	{
+	    		"featureType": "water",
+	    		"stylers": [
+	      			{ "color": "#060105" }
+	    		]
+	  		},{
+			    "featureType": "landscape",
+			    "stylers": [
+			      { "color": "#435E5E" }
+			    ]
+			},{
+				"featureType": "road.local",
+				"stylers": [
+				{ "color": "white" }
+				]
+			},{
+				"featureType": "road.arterial",
+				"stylers": [
+				{ "color": "#00B2B2" }
+				]
+			},{
+				"featureType": "road.highway",
+				"stylers": [
+				{ "color": "#A3FFFF" }
+				]
+			},{
+	    		"featureType": "poi",
+	    		"stylers": [
+	      			{ "color": "#fff" }
+	    		]
+	  		},{
+	    		"featureType": "transit.line",
+	    		"stylers": [
+	      			{ "visibility": "off" }
+	    		]
+	  		},{
+	    		"featureType": "administrative",
+	    		"stylers": [
+	      			{ "color": "#E0FFFF" },
+	      			{ "visibility": "simplified" }
+	    		]
+	  		}
+        ];
+	map.setOptions({styles: styles});
     // Add the marker to the map by calling setMap()
     marker.setMap(map);
 }
 
 $(document).ready(function() {
     initialize_gmaps();
+
 });
 </script>
 </html>
+
+<!-- [
+  {
+    "featureType": "landscape.man_made"  },{
+    "featureType": "water",
+    "stylers": [
+      { "color": "#060105" }
+    ]
+  },{
+    "featureType": "landscape",
+    "stylers": [
+      { "color": "#435E5E" }
+    ]
+  },{
+    "featureType": "road",
+    "stylers": [
+      { "color": "#00B2B2" }
+    ]
+  }
+] -->
+
+
