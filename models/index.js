@@ -13,25 +13,23 @@ var placeSchema = new mongoose.Schema({
 
 var hotelSchema = new mongoose.Schema({
 	name: {type: String, required: true},
-	place: {type: Array, required: true},
+	// place: {type: Array, required: true},
+	place: {type: [placeSchema], required: true},
 	num_stars: {type: Number, required: true, min: 1, max:5},
 	amenities: {type: String, required: true},
 });
 
-/// return amenities as CSV string
-
-//
-
-
 var thingToDoSchema = new mongoose.Schema({
 	name: {type: String, required: true},
-	place: {type: Array, required: true},
+	// place: {type: Array, required: true},
+	place: {type: [placeSchema], required: true},
 	age_range: {type: String, required: true},
 });
 
 var restaurantSchema = new mongoose.Schema({
 	name: {type: String, required: true},
-	place: {type: Array, required: true},
+	// place: {type: Array, required: true},
+	place: {type: [placeSchema], required: true},
 	cuisine: {type: String, required: true},
 	price: {type: Number, required: true, min:1, max:5},
 });
