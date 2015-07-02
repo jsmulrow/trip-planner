@@ -3,9 +3,18 @@ $tealAccent: #00B2B2;
 $darkGrey: #333;
 $backgroundGrey: #707070;
 $blueGrey: #435E5E;
+$lightTeal: #A3FFFF;
 
 body {
 	background-color: $backgroundGrey;
+	font-family: 'verdana';
+}
+.navbar {
+	border-radius: 0px;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	border-color: $tealAccent;
 }
 .navbar-inverse .navbar-nav > li > a, .navbar-inverse .navbar-brand {
     color: $tealAccent;
@@ -34,8 +43,14 @@ body {
 		background-color: $blueGrey;
 		color: black;
 	}
+	button {
+		background-color: $darkGrey;
+		border: $tealAccent solid 2px;
+		color: $tealAccent;
+	}
 	button:hover {
-		background-color: lighten($darkGrey, 35%);
+		box-shadow: $lightTeal 0px 0px 1px 1px;
+		color: $tealAccent;
 	}
 }
 .dayHolder {
@@ -48,11 +63,12 @@ body {
 		background-color: $darkGrey;
 		margin-left: 1px;
 		margin-right: 1px;
+		padding: 10px;
 		border-radius: 15px;
 		border: 2px solid $tealAccent;
 		color: $tealAccent;
 		&:hover {
-			background-color: lighten($darkGrey, 20%);
+			box-shadow: $lightTeal 0px 0px 1px 1px;
 		}
 	}
 }
@@ -74,7 +90,14 @@ body {
 	}
 	button {
 		margin-bottom:  -3px;
-		border-radius: 5px;
+		border-radius: 15px;
+		background-color: $darkGrey;
+		border-color: $tealAccent;
+		color: $tealAccent;
+		&:hover {
+			box-shadow: $lightTeal 0px 0px 1px 1px;
+			color: $tealAccent;
+		}
 	}
 	a {
 		font-size: 18px;
