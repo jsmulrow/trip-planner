@@ -1,5 +1,13 @@
 body {
-  background-color: #707070; }
+  background-color: #707070;
+  font-family: 'verdana'; }
+
+.navbar {
+  border-radius: 0px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-color: #00B2B2; }
 
 .navbar-inverse .navbar-nav > li > a, .navbar-inverse .navbar-brand {
   color: #00B2B2; }
@@ -26,8 +34,13 @@ body {
   .selectionMenu select {
     background-color: #435E5E;
     color: black; }
+  .selectionMenu button {
+    background-color: #333;
+    border: #00B2B2 solid 2px;
+    color: #00B2B2; }
   .selectionMenu button:hover {
-    background-color: #8c8c8c; }
+    box-shadow: #A3FFFF 0px 0px 1px 1px;
+    color: #00B2B2; }
 
 .dayHolder {
   padding: 10px;
@@ -39,11 +52,12 @@ body {
     background-color: #333;
     margin-left: 1px;
     margin-right: 1px;
+    padding: 10px;
     border-radius: 15px;
     border: 2px solid #00B2B2;
     color: #00B2B2; }
     .dayHolder .nav.nav-pills li a:hover {
-      background-color: #666666; }
+      box-shadow: #A3FFFF 0px 0px 1px 1px; }
 
 .activitiesHolder {
   background-color: #333;
@@ -61,7 +75,13 @@ body {
     padding-top: 15px; }
   .activitiesHolder button {
     margin-bottom: -3px;
-    border-radius: 5px; }
+    border-radius: 15px;
+    background-color: #333;
+    border-color: #00B2B2;
+    color: #00B2B2; }
+    .activitiesHolder button:hover {
+      box-shadow: #A3FFFF 0px 0px 1px 1px;
+      color: #00B2B2; }
   .activitiesHolder a {
     font-size: 18px; }
 
